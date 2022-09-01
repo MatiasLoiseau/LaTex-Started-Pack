@@ -59,7 +59,7 @@
 \tableofcontents % general index
 \cleardoublepage
 
-\section{Section 1} % creates a section
+\section{Ways to write text} % creates a section
 Normal text
 
 \textbf{Text in bold (ctrl + b)}
@@ -70,7 +70,7 @@ Text with footnote\footnote{This is a footnote.}
 
 This is a cite\cite{knn}.
 
-\subsection{Subsection 1.1}
+\subsection{Enumerate and itemize information}
 
 \begin{enumerate}
 	\item Enumerate one
@@ -95,10 +95,10 @@ This is a cite\cite{knn}.
 	  \item Enumerate one
 \end{enumerate}
 
-\subsection{Subsection 1.2}
+\section{Equations}
 
+\subsection{Simple equations}
 
-Simple equation
 \begin{equation}
 	E=mc^2
 \end{equation}
@@ -111,7 +111,7 @@ Simple equation
  	 \end{cases*}
 \end{equation}
 
-Complex equations
+\subsection{Complex equations}
 
 \begin{equation}\label{eq:layers}
 	\vec{h_1}^{\,} = f(\vec{x}^{\,}.W_1)
@@ -134,13 +134,15 @@ $$
 
 $$\frac{dL}{db_k}=\frac{dL}{dy_k}\frac{dy_k}{db_k}=\frac{dL}{dy_k}\frac{dy_k}{dz_k}\frac{dz_k}{db_k}=l'_{k+1}\odot f'_k\frac{d(W_kx_k+b_k)}{db_k}$$
 
+\subsubsection{Matrix}
+
 \begin{equation}
 IoU(A,B)=\frac{|A \cap B|}{|A \cup B|}=\frac{|A \cap B|}{|A| + |B| - |A \cap B|}
 \end{equation}
 
 \cleardoublepage
 
-\section{Section 2} % creates a section
+\section{Figures} % creates a section
 
 \begin{figure}[H]
 	\centering
@@ -167,7 +169,7 @@ This is a reference for the image (figure \ref{fig:perceptron-graph}) above.
 \label{fig:mse-visu-12}
 \end{figure}
 
-\subsection{Subsection 2.1}
+\section{Tables}
 
 \begin{table}[H]
 	\centering
@@ -189,8 +191,6 @@ This is a reference for the image (figure \ref{fig:perceptron-graph}) above.
 		\caption{Table X.}
 	\label{tab:table-x}
 \end{table}
-
-\subsubsection{Subsubsection 2.1.1}
 
 \begin{table}[H]
 	\centering
@@ -218,9 +218,6 @@ This is a reference for the image (figure \ref{fig:perceptron-graph}) above.
 	\label{tab:table-y}
 \end{table}
 
-\subsubsection{Subsubsection 2.1.2}
-
-\subsection{Subsection 2.2}
 
 \cleardoublepage
 
@@ -231,7 +228,7 @@ This is a reference for the image (figure \ref{fig:perceptron-graph}) above.
 
 \section{First Appendix}\label{app:one}
 
-This is a appendix
+This is an appendix
 
 \cleardoublepage
 
