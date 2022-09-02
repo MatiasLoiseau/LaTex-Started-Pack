@@ -5,7 +5,7 @@ Repository to start a latex document with several examples.
   - Elegant cover
   - Linking index
   - Section division
-  - Different ways of writing text
+  - Different forms of writing text
   - Simple and complex equations formats
   - Matrix examples
   - Insert figures
@@ -16,7 +16,7 @@ Repository to start a latex document with several examples.
 
 ## Installation
 
-To install LaTex i recommend installing the full version.
+To install LaTex I recommend installing the full version.
 
 **Debian based**
 

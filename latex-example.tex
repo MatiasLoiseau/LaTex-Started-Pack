@@ -4,6 +4,8 @@
 
 \documentclass{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
 
+%\usepackage[spanish]{babel} % Para traducir palabras claves al español como "Figure" -> "Figura"
+
 \usepackage{amsmath, amssymb} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
 \usepackage{mathtools} % using cases inside equations
@@ -16,7 +18,7 @@
 
 \parskip 0.1in %paragraph distance
 
-\usepackage[margin=0.984252in]{geometry} %magin
+\usepackage[margin=0.984252in]{geometry} %margin
 
 \usepackage[hidelinks]{hyperref} % Magic for index linking
 
@@ -47,7 +49,7 @@
 \begin{figure}
 \centering
 	\includegraphics[width=0.2\textwidth]{images/undav-logo}
-	%\caption{Mi Figura}
+	%\caption{Mi Figure}
 	\label{fig:undav-logo}
 \end{figure}
 \maketitle % creates title using information in preamble (title, author, date)
@@ -59,7 +61,7 @@
 \tableofcontents % general index
 \cleardoublepage
 
-\section{Ways to write text} % creates a section
+\section{Forms to write text} % creates a section
 Normal text
 
 \textbf{Text in bold (ctrl + b)}
