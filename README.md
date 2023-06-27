@@ -29,7 +29,7 @@ sudo apt-get install texlive-full
 
 ```bash
 sudo pacman -Syu
-sudo pacman -S texlive-most
+sudo pacman -S texlive
 ```
 
 ## LaTex editors
