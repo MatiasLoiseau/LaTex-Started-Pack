@@ -55,3 +55,8 @@ sudo pacman -S texmaker
 ```bash
 sudo pacman -S texworks
 ```
+## Optional: Add spanish dictionary to spell check
+
+Go to settings -> editor -> spelling dictionary -> and add the path where you installed this repository, for example: /home/user/example/LaTex-Started-Pack/dictionaries/es_SV.dic
+
+Also you can download any dictionary from here: https://extensions.libreoffice.org/
