@@ -5,12 +5,13 @@ Repository to start a latex document with several examples.
   - Elegant cover
   - Linking index
   - Section division
-  - Different forms of writing text
+  - Different ways of writing text
   - Simple and complex equations formats
   - Matrix examples
   - Insert figures
   - Simple and complex table creation
   - Reference figures or tables
+  - Headings
   - Appendix
   - Bibliography
 
