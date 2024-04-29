@@ -25,6 +25,8 @@
 \usepackage{chngcntr} % For figure number matching with section number
 \counterwithin{figure}{section}
 
+\usepackage{setspace} % Set space between paragraphs
+
 \usepackage{appendix} % Appendix
 
 %\pagestyle{headings} % Headings -> put the name of the section and page number
@@ -99,6 +101,23 @@ This is a cite\cite{knn}.
 	  \item Start enumerate at 0
 	  \item Enumerate one
 \end{enumerate}
+
+\section{Spaces}
+
+Add space between \quad words.
+
+Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO2).
+
+\begin{spacing}{0.8} 
+Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO2).
+\end{spacing}
+
+\begin{spacing}{1.5} 
+Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO2).
+\end{spacing}
+
+% util function: 
+%$\begin{spacing}{0.9} \tableofcontents \end{spacing}
 
 \section{Equations}
 
