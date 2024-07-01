@@ -1,63 +1,75 @@
-# LaTex-Started-Pack
-Repository to start a latex document with several examples.
+# LaTeX Starter Pack
 
-## What does the .tex contain?
-  - Elegant cover
-  - Linking index
-  - Section division
-  - Different ways of writing text
-  - Simple and complex equations formats
-  - Matrix examples
-  - Insert figures
-  - Simple and complex table creation
-  - Reference figures or tables
-  - Headings
-  - Appendix
-  - Bibliography
+A repository to help you get started with LaTeX, featuring several examples to illustrate various capabilities of LaTeX.
+
+## Features
+
+The `.tex` file in this repository includes examples of:
+
+- Elegant cover pages
+- Linked table of contents
+- Section divisions
+- Various text formatting options
+- Simple and complex equation formats
+- Matrix examples
+- Inserting figures
+- Creating simple and complex tables
+- Referencing figures and tables
+- Headings
+- Appendices
+- Bibliography management
 
 ## Installation
 
-To install LaTex I recommend installing the full version.
+To use LaTeX, it's recommended to install the full version of TeX Live.
 
-**Debian based**
+### Debian-based Systems
 
 ```bash
 sudo apt-get update
 sudo apt-get install texlive-full 
 ```
 
-**Arch based**
+### Arch-based Systems
 
 ```bash
 sudo pacman -Syu
-sudo pacman -S texlive
+sudo pacman -S texlive-most
 ```
 
-## LaTex editors
+## LaTeX Editors
 
-The most popular latex document editor is Texmaker, but you can try Texworks too. To install both IDEs just run
+The most popular LaTeX document editors are Texmaker and TeXworks. You can install both as follows:
 
-**Debian based**
+### Debian-based Systems
 
+To install Texmaker, run:
 ```bash
 sudo apt-get install texmaker 
 ```
 
+To install TeXworks, run:
 ```bash
 sudo apt-get install texworks
 ```
 
-**Arch based**
+### Arch-based Systems
 
+To install Texmaker, run:
 ```bash
 sudo pacman -S texmaker
 ```
 
+To install TeXworks, run:
 ```bash
 sudo pacman -S texworks
 ```
-## Optional: Add spanish dictionary to spell check
 
-Go to settings -> editor -> spelling dictionary -> and add the path where you installed this repository, for example: /home/user/example/LaTex-Started-Pack/dictionaries/es_SV.dic
+## Optional: Add Spanish Dictionary for Spell Check
 
-Also you can download any dictionary from here: https://extensions.libreoffice.org/
+To add a Spanish dictionary for spell checking in your LaTeX editor, follow these steps:
+
+1. Go to `Settings` -> `Editor` -> `Spelling Dictionary`.
+2. Add the path where you installed this repository. For example: `/home/user/example/LaTeX-Starter-Pack/dictionaries/es_SV.dic`.
+
+You can also download additional dictionaries from the [LibreOffice extensions site](https://extensions.libreoffice.org/).
