@@ -3,20 +3,16 @@
 \documentclass{article} % Define the type of document
 
 % Package imports for additional functionality
-\usepackage[utf8]{inputenc} % Ensure proper encoding
-\usepackage{amsmath, amssymb} % Math packages
-\usepackage{mathtools} % Enhanced math functionality
+\usepackage{mathtools} % Enhanced math functionality (includes amsmath)
+\usepackage{amssymb} % Additional math symbols
 \usepackage{graphicx} % Image package
 \usepackage{float} % Float specifiers for figures and tables
 \usepackage{subcaption} % Subfigures
 \usepackage[margin=1in]{geometry} % Set page margins
-\usepackage[hidelinks]{hyperref} % Hyperlinks without borders
 \usepackage{chngcntr} % For section-specific figure numbering
-\usepackage{setspace} % Set space between paragraphs
+\usepackage{setspace} % Set line spacing
 \usepackage{appendix} % Appendices
-
-%\pagestyle{myheadings} % Set specific headings
-%\markright{Loiseau Matías}
+\usepackage[hidelinks]{hyperref} % Hyperlinks without borders
 
 % Customize figure numbering
 \counterwithin{figure}{section}
@@ -25,12 +21,14 @@
 \title{Semi-Simple Sample Document}
 \date{November 2021}
 \author{
-    \textbf{Ingeniería en Informática}\\
-    Departamento de Tecnología y Administración\\[2ex]
-    \textbf{Matías Loiseau}\\
-    mloiseau@undav.edu.ar\\[2ex]
-    \textbf{Jon Snow}\\
-    jsnow@winterfell.edu.ar
+    Matías Loiseau\\
+    Departamento de Tecnología y Administración\\
+    Ingeniería en Informática\\
+    \texttt{mloiseau@undav.edu.ar}
+    \and
+    Jon Snow\\
+    Winterfell University\\
+    \texttt{jsnow@winterfell.edu.ar}
 }
 
 % Begin document
@@ -39,16 +37,16 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.2\textwidth]{images/undav-logo}
-    %\caption{My Figure}
+    \caption{University Logo}
     \label{fig:undav-logo}
 \end{figure}
 
 \maketitle % Create title using information in preamble
 \thispagestyle{empty} % Suppress page number on title page
-\cleardoublepage
+\clearpage
 
 \tableofcontents % Generate table of contents
-\cleardoublepage
+\clearpage
 
 \section{Forms to Write Text} % Creates a section
 Normal text.
@@ -81,7 +79,7 @@ This is a citation\cite{knn}.
     \end{itemize}
 \end{itemize}
 
-\begin{enumerate}\addtocounter{enumi}{-1}
+\begin{enumerate}\setcounter{enumi}{0}
     \item Start enumeration at 0
     \item Enumerate one
 \end{enumerate}
@@ -90,14 +88,14 @@ This is a citation\cite{knn}.
 
 Add space between \quad words.
 
-Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO2).
+Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO\textsubscript{2}).
 
 \begin{spacing}{0.8} 
-Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO2).
+Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO\textsubscript{2}).
 \end{spacing}
 
 \begin{spacing}{1.5} 
-Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO2).
+Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one carbon atom and one oxygen atom. It is produced through incomplete combustion of carbon-containing fuels such as gasoline, natural gas, coal, wood, and oil. When these fuels do not burn completely due to insufficient oxygen supply, carbon monoxide is formed instead of carbon dioxide (CO\textsubscript{2}).
 \end{spacing}
 
 \section{Equations}
@@ -112,27 +110,21 @@ Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one
     f(x) =
     \begin{cases*}
         1 & if $x > 0$\\
-        0 & if $x \leqslant 0$
+        0 & if $x \leq 0$
      \end{cases*}
 \end{equation}
 
 \subsection{Complex Equations}
 
-\begin{equation}\label{eq:layers}
-    \vec{h_1} = f(\vec{x} \cdot W_1)
-\end{equation}
-\[
-    \vec{h_2} = f(\vec{h_1} \cdot W_2)
-\]
-\[
-    \vec{h_3} = f(\vec{h_2} \cdot W_3)
-\]
-\[
-    \vec{y} = f(\vec{h_3} \cdot W_4)
-\]
+\begin{align}
+    \vec{h}_1 &= f(\vec{x} \cdot W_1) \label{eq:layers1} \\
+    \vec{h}_2 &= f(\vec{h}_1 \cdot W_2) \\
+    \vec{h}_3 &= f(\vec{h}_2 \cdot W_3) \\
+    \vec{y} &= f(\vec{h}_3 \cdot W_4)
+\end{align}
 
 \begin{equation}\label{eq:mse}
-    MSE = \frac{1}{n} \sum_{i=1}^{n}(y_{i} - \hat{y}_{i})^2
+    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n}(y_{i} - \hat{y}_{i})^2
 \end{equation}
 
 \[
@@ -150,10 +142,10 @@ Carbon monoxide (CO) is a colorless, odorless, and tasteless gas composed of one
 \subsubsection{Matrix}
 
 \begin{equation}
-    IoU(A,B) = \frac{|A \cap B|}{|A \cup B|} = \frac{|A \cap B|}{|A| + |B| - |A \cap B|}
+    \text{IoU}(A,B) = \frac{|A \cap B|}{|A \cup B|} = \frac{|A \cap B|}{|A| + |B| - |A \cap B|}
 \end{equation}
 
-\cleardoublepage
+\clearpage
 
 \section{Figures}
 
@@ -168,13 +160,14 @@ This is a reference for the image (Figure \ref{fig:perceptron-graph}) above.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{2in}
-        \includegraphics[width=1\textwidth]{images/mse-visu-1}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{images/mse-visu-1}
         \caption{Figure one.}
         \label{fig:mse-visu-1}
     \end{subfigure}    
-    \begin{subfigure}{2in}
-        \includegraphics[width=1\textwidth]{images/mse-visu-2}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{images/mse-visu-2}
         \caption{Figure two.}
         \label{fig:mse-visu-2}
     \end{subfigure}
@@ -187,8 +180,7 @@ This is a reference for the image (Figure \ref{fig:perceptron-graph}) above.
 \begin{table}[H]
     \centering
     \begin{tabular}{||l | c ||}
-        \hline
-        \hline
+        \hline\hline
         Data 1 & 185\\
         \hline
         Data 222 & 37\\
@@ -198,8 +190,7 @@ This is a reference for the image (Figure \ref{fig:perceptron-graph}) above.
         Data 4444444444 & 12\\
         \hline
         Data 555 & 13\\
-        \hline
-        \hline
+        \hline\hline
     \end{tabular}
     \caption{Table X.}
     \label{tab:table-x}
@@ -208,47 +199,43 @@ This is a reference for the image (Figure \ref{fig:perceptron-graph}) above.
 \begin{table}[H]
     \centering
     \begin{tabular}{||l || c | c | c | c | c ||}
-        \hline
-        \hline
+        \hline\hline
         & \multicolumn{3}{c|}{Number of people} & \multicolumn{2}{c||}{Difference between}\\
         \hline
-        Module & 0 & 1 & 2 & 1 y 0 & 2 y 0\\
-        \hline            
-        \hline
+        Module & 0 & 1 & 2 & 1 vs 0 & 2 vs 0\\
+        \hline\hline
         1 & 21.07 & 21.19 & 21.33 & 0.12 & 0.26\\
         \hline
-        2 & 22.25 & 22.35 & 22.39 & 0.1 & 0.14\\
+        2 & 22.25 & 22.35 & 22.39 & 0.10 & 0.14\\
         \hline
-         3 & 18.11 & 18.19 & 18.61 & 0.07 & 0.5\\
+        3 & 18.11 & 18.19 & 18.61 & 0.07 & 0.50\\
         \hline
-        4 & 18.3 & 18.44 & 18.87 & 0.15 & 0.57\\
+        4 & 18.30 & 18.44 & 18.87 & 0.15 & 0.57\\
         \hline
         6 & 18.21 & 18.43 & 19.45 & 0.21 & 1.24\\
-        \hline
-        \hline
+        \hline\hline
     \end{tabular}
     \caption{Table Y.}
     \label{tab:table-y}
 \end{table}
 
-\cleardoublepage
+\clearpage
 
 \appendix
-\clearpage
-\addappheadtotoc
 \appendixpage
+\addappheadtotoc
 
 \section{First Appendix}\label{app:one}
 
 This is an appendix.
 
-\cleardoublepage
+\clearpage
 
 \section{Second Appendix}\label{app:two}
 
 Text.
 
-\cleardoublepage
+\clearpage
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{section}{Bibliography}
