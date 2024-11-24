@@ -15,6 +15,7 @@ The `.tex` file in this repository includes examples of:
 - Inserting figures
 - Creating simple and complex tables
 - Referencing figures and tables
+- Algorith Example
 - Headings
 - Appendices
 - Bibliography management

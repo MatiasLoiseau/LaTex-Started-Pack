@@ -13,6 +13,8 @@
 \usepackage{setspace} % Set line spacing
 \usepackage{appendix} % Appendices
 \usepackage[hidelinks]{hyperref} % Hyperlinks without borders
+\usepackage{algorithm} % For algorithm environment
+\usepackage{algorithmic} % For algorithmic commands
 
 % Customize figure numbering
 \counterwithin{figure}{section}
@@ -218,6 +220,33 @@ This is a reference for the image (Figure \ref{fig:perceptron-graph}) above.
     \caption{Table Y.}
     \label{tab:table-y}
 \end{table}
+
+\section{Algorithm Example}
+
+Using the `algorithm` and `algorithmic` packages.
+
+\begin{algorithm}[H]
+\caption{Example Algorithm: Binary Search}
+\label{alg:binary-search}
+\begin{algorithmic}[1]
+\REQUIRE Sorted array $A[1 \dots n]$, target value $x$
+\ENSURE Index of $x$ in $A$, or -1 if not found
+\STATE $low \gets 1$
+\STATE $high \gets n$
+\WHILE{$low \leq high$}
+    \STATE $mid \gets \lfloor (low + high) / 2 \rfloor$
+    \IF{$A[mid] = x$}
+        \RETURN $mid$
+    \ELSIF{$A[mid] < x$}
+        \STATE $low \gets mid + 1$
+    \ELSE
+        \STATE $high \gets mid - 1$
+    \ENDIF
+\ENDWHILE
+\RETURN $-1$
+\end{algorithmic}
+\end{algorithm}
+
 
 \clearpage
 
